@@ -1,0 +1,290 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Source Code Pro";
+	text-align: center;
+	color:#fff;
+}
+
+body {
+	min-height: 100vh;
+	background-image: url(images/Website\ background.png);
+	background-color:cornflowerblue;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position:center;
+}
+
+h1 {
+	text-align: center;
+	font-weight: 300;
+}
+
+p {
+	font-weight: 200;
+}
+
+hr {
+	height: 1px;
+	width: 100%;
+}
+
+/*Content below has to do with the nav*/
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 100px;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+
+.header::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.logo {
+	font-size: 32px;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 400;
+}
+
+.navbar a {
+	position: relative;
+	font-size: 19px;
+	color: #fff;
+	font-weight: 300;
+	text-decoration: none;
+	margin-left: 40px;
+}
+
+#check {
+	display: none;
+}
+
+.navbar a::before {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #fff;
+	transition: .3s;
+}
+
+.navbar a:hover::before {
+	width: 100%;
+}
+
+.icons {
+	position: absolute;
+	right: 5%;
+	font-size: 2.8rem;
+	color: #fff;
+	cursor: pointer;
+	display: none;
+}
+
+/*Content below has to do with headings*/
+.heading {
+	margin-top: 150px;
+	padding-top: 50px;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.heading p {
+	text-align: left;
+	padding-left: 40px;
+}
+
+.heading h1 {
+	text-align: left;
+	padding-left: 40px;
+	font-size: 2.5rem;
+	font-weight: 400;
+}
+
+/*Content below has to do with elements in the index main*/
+
+.index-main {
+	margin-top: 200px;
+	padding-top: 50px;
+	padding: 2em;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	height: auto;
+}
+
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.center-text h1{
+	font-size: 2.5rem;
+	font-weight: 400;
+	margin: 0 0 40px;
+}
+
+.center-text p {
+	font-size: 18px;
+	line-height: 29px;
+	max-width: 500px;
+	margin: 40px;
+	font-weight: 100;
+	text-align: center;
+}
+
+.socials {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 1rem 0 3rem 0;
+}
+
+.socials li {
+	margin: 0 20px;
+}
+
+.socials a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.socials a ion-icon {
+	font-size: 1.9rem;
+	transition: transform 0.3s ease;
+}
+
+.socials a:hover ion-icon{
+	transform: scale(1.2);
+}
+
+/*Content below has to do with elements in the Works main*/
+
+.linktree {
+    margin-top: 100px;
+    padding: 1.5rem;
+	background-color: rgba(0, 0, 0, 0.7);
+	color:#fff;
+}
+
+.linktree-gallery {
+	display: inline-flex;
+	margin-right: 10px;
+	justify-content: center;
+	max-width: 200px;
+}
+
+.linktree-gallery img {
+	height: auto;
+}
+
+/**Footer stuff**/
+
+.footer {
+	position:fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	font-size: xx-small;
+	background-color: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(50px);
+	color:#fff;
+	text-align: center;
+	z-index: 1;
+
+}
+
+@media (max-width: 992px) {
+	.header {
+		padding: 1.3rem 5%;
+	}
+}
+
+@media (max-width: 768px) {
+	.icons {
+		display: inline-flex;
+	}
+
+	#check:checked~.icons #menu-icon {
+		display: none;
+	}
+
+	.icons #close-icon {
+		display: none;
+	}
+
+	#check:checked~.icons #close-icon {
+		display: block;
+	}
+
+	.navbar {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		width: 100%;
+		height: 0;
+		background-color: rgba(0, 0, 0, 0.7);
+		box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+		overflow: hidden;
+		transition: .3s ease;
+	}
+
+	#check:checked~.navbar {
+		height: 12.5rem;
+	}
+
+	.navbar a {
+		display: block;
+		font-size: 1.1rem;
+		margin: 1.5rem 0;
+		text-align: center;
+		transform: translateY(-50px);
+		transition: .3s ease;
+	}
+
+	#check:checked~.navbar a {
+		transform: translateY(0);
+	}
+}
+
+@media (max-width: 664px) {
+	.center {
+		width: 100%;
+		margin-bottom: 55px;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	.center-text h1 {
+		margin-top: 40px;
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 470px) {
+	.heading h1 {
+		padding-bottom: 10px;
+	}
+}
