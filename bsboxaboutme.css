@@ -1,22 +1,21 @@
 img {
-    width: 100%
+    width:100%
 }
 
 a {
     text-decoration: none;
-    color: white;
 }
 
 .profile_name {
     font-size: 2.5rem;
     font-weight: 400;
-    padding-top: 0.5em;
+    padding-top: 0.7em;
     padding-bottom: 0.5em;
 }
 
 .profile_title {
     font-size: 1.3rem;
-    font-weight: 300;
+    font-weight: 400;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
@@ -29,6 +28,7 @@ a {
     border-radius: 50%;
     overflow: auto;
     height: 100%;
+    max-width: 500px;
 }
 
 .containter {
@@ -38,7 +38,12 @@ a {
     padding: 5rem;
     background-color: rgba(0, 0, 0, 0.7);
     height: 100%;
-    padding-top: 150px;
+    padding-top: 100px;
+}
+
+.description {
+    text-align: left;
+    margin-bottom: 50px;
 }
 
 .download_button {
