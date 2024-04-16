@@ -1,0 +1,59 @@
+img {
+    width: 100%
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.profile_name {
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.profile_title {
+    font-size: 1.3rem;
+    font-weight: 300;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.profile_img {
+    width: 100%;
+}
+
+.profile_img img {
+    border-radius: 50%;
+    overflow: auto;
+    height: 100%;
+}
+
+.containter {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    padding-top: 150px;
+}
+
+.download_button {
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.5s ease;
+}
+
+.download_button:hover {
+    transform: translateY(-5px);
+}
