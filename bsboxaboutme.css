@@ -31,12 +31,12 @@ a {
     max-width: 500px;
 }
 
-.containter {
+.container {
     max-width: 1000px;
     width: 90%;
     margin: 0 auto;
     padding: 5rem;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.83);
     height: 100%;
     padding-top: 100px;
 }
